@@ -4,7 +4,7 @@ Donate link: http://www.viewmybrowser.com/
 Tags: widget, plugin, admin, sidebar, screen, sharing, remote, control, browser, support, customer, advisor, meeting
 Requires at least: 3
 Tested up to: 3.5
-Stable tag: 1.0
+Stable tag: 1.0a
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
