@@ -16,6 +16,7 @@ ViewMyBrowser is the leading browser sharing solution for WordPress.
 This plugin activates the awesome features of a remote support and co-browsing solution on your WordPress installation.
 
 Features:
+
 * Your customers get instant online support without installing any software or browser plugins.
 * Support staff can view the browser content of their customers in real time.
 * Remote Control: Show editors how to use your wordpress installation.
@@ -23,10 +24,9 @@ Features:
 
 == Installation ==
 
-1. Extract viewmybrowser.zip to `/wp-content/plugins/` directory.
+1. Install the ViewMyBrowser plugin via the the WordPress plugins dialog.
 1. Activate the plugin through the 'Plugins' menu in WordPress
-
-Or just use the wordpress plugins dialog.
+1. To complete installation, enter your site-id (see FAQ) in the viewmybrowser's configuration.
 
 == Frequently Asked Questions ==
 
