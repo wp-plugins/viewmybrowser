@@ -6,7 +6,7 @@ Description: Zur einbindung der ViewMyBrowser Supportlösung in ihre Wordpress H
 Version: 1.0
 Author: ViewMyBrowser
 Author URI: http://www.viewmybrowser.com/
-Update Server: http://viewmybrowser.appspot.com/plugins/wordpress/viewmybrowser/
+Update Server: http://app.viewmybrowser.com/vmb/plugins/wordpress/viewmybrowser/
 */
 
 /**
@@ -36,6 +36,7 @@ Update Server: http://viewmybrowser.appspot.com/plugins/wordpress/viewmybrowser/
 error_reporting(0);
 
 add_action('widgets_init', array('ViewMyBrowser', 'init'));
+
 class ViewMyBrowser {
 	//Variabelen Setzen
 	public static $siteID;
@@ -118,9 +119,19 @@ class ViewMyBrowser {
 	}
 
 	public static function getCodeSnippet($hidden) {
-		return "<script type=\"text/javascript\" charset=\"utf-8\"> document.write(unescape('%3Cscript type=\"text/javascript\"".
-			" charset=\"utf-8\" src=\"' + document.location.protocol + '//viewmybrowser.appspot.com/client.js\"" . ($hidden == true ? "hidden=\"true\"" : '') . " id=\"viewmybrowser\"".
-			" siteID=\"" . htmlspecialchars(self::$siteID) . "\" clientID=\"".htmlspecialchars(self::$clientID)."\" cacheDom=\"true\" docType=\'\'%3E%3C/script%3E'));</script>";
+		return '<script type="text/javascript">'.
+			"var _vmb = _vmb || {};".
+			"_vmb.source = window.location.protocol + '//app.viewmybrowser.com/vmb/';".
+			"_vmb.siteID = '" . htmlspecialchars(self::$siteID) . "';".
+			"_vmb.clientID = '" . htmlspecialchars(self::$clientID) . "';".
+			"_vmb.hidden = " . ($hidden  == true ? 'true' : 'false') . ";".
+
+			"(function() {".
+			"var vmb = document.createElement('script'); vmb.type = 'text/javascript'; vmb.async = false; vmb.charset='utf-8';".
+			"vmb.src = _vmb.source + 'client.js';".
+			"var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vmb, s);".
+			"})();".
+		"</script>";
 	}
 
 	/* Frontend */
@@ -265,4 +276,5 @@ function ViewMyBrowser_uninstall() {
 
 register_activation_hook(__FILE__, 'ViewMyBrowser_install');
 register_deactivation_hook(__FILE__, 'ViewMyBrowser_uninstall');
+
 ?>
