@@ -3,8 +3,8 @@ Contributors: egotec
 Donate link: http://www.viewmybrowser.com/
 Tags: widget, plugin, admin, sidebar, screen, sharing, remote, control, browser, support, customer, advisor, meeting
 Requires at least: 3
-Tested up to: 3.5
-Stable tag: 1.0a
+Tested up to: 3.6
+Stable tag: 1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -46,6 +46,10 @@ Go to [help.viewmybrowser.com](http://help.viewmybrowser.com).
 
 = 1.0 =
 * First stable release.
+
+= 1.1 =
+* Wordpress 3.6 compatibility.
+* Updated ViewMyBrowser code snippet.
 
 == Upgrade Notice ==
 
