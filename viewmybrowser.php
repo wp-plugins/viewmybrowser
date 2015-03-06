@@ -28,7 +28,7 @@ Update Server: http://app.viewmybrowser.com/vmb/plugins/wordpress/viewmybrowser/
  * Verbatim copying and distribution of this entire article is permitted in any medium without royalty provided this notice is preserved.
  *
  * @link http://www.viewmybrowser.com
- * @version 1.0
+ * @version 1.3
  * @copyright Copyright: 2012 EGOTEC GmbH
  * @author EGOTEC GmbH <sales@viewmybrowser.com>
  */
@@ -121,7 +121,7 @@ class ViewMyBrowser {
 	public static function getCodeSnippet($hidden) {
 		return '<script type="text/javascript">'.
 			"var _vmb = _vmb || {};".
-			"_vmb.source = window.location.protocol + '//app.viewmybrowser.com/vmb/';".
+			"_vmb.source = window.location.protocol + '//app.viewmybrowser.com/';".
 			"_vmb.siteID = '" . htmlspecialchars(self::$siteID) . "';".
 			"_vmb.clientID = '" . htmlspecialchars(self::$clientID) . "';".
 			"_vmb.hidden = " . ($hidden  == true ? 'true' : 'false') . ";".
